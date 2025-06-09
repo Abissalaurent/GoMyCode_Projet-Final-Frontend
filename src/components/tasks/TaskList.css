@@ -1,0 +1,12 @@
+/* src/components/tasks/TaskList.css */
+.task-filter-bar {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stats-badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
