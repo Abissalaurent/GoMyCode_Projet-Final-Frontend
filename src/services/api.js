@@ -1,19 +1,20 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://task-management-backend-o84f.onrender.com/api",
   headers: {
-    'Content-Type': 'application/json'
-  }
+    "Content-Type": "application/json",
+  },
+  withCredentials: true, // Optionnel, à activer si tu utilises des cookies
 });
 
 // src/services/api.js
 export const updateUserProfile = async (userData) => {
   try {
-    const response = await API.put('/users/profile', userData);
+    const response = await API.put("/users/profile", userData);
     return response.data;
   } catch (error) {
-    throw error.response?.data || { message: 'Erreur lors de la mise à jour' };
+    throw error.response?.data || {message: "Erreur lors de la mise à jour"};
   }
 };
 
