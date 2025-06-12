@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://task-management-backend-o84f.onrender.com/api",
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
   timeout: 20000, // ⏱️ Timeout de 20 secondes max
   headers: {
     "Content-Type": "application/json",
